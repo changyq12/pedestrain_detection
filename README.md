@@ -54,18 +54,18 @@ This code has been tested on Ubuntu 16.04 with MATLAB 2014b and CUDA 7.5.
 
 #### Faster RCNN
 
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/ped3.JPG)
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/ped3_pr.JPG)
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/faster-rcnn-stage2.JPG)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/ped3.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/ped3_pr.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/FRCN/faster-rcnn-stage2.jpg)
 
 In addition, we have raised the mr to 30% for Faster RCNN on the caltech datasets.
 
 #### RPN+BF
 
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped2.JPG)
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped3.JPG)
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn.JPG)
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn_bf.JPG)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped2.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped3.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn_bf.jpg)
 
 
 
