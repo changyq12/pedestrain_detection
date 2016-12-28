@@ -1,26 +1,31 @@
-# Is Faster R-CNN Doing Well for Pedestrian Detection?
+# Comparing the differences between Faster RCNN and RPN+BF in pedestrain detection
 
-By Liliang Zhang, Liang Lin, Xiaodan Liang, Kaiming He
+By 庄月清，常亦谦
 
 ### Introduction
 
-This code is relative to an [arXiv tech report](https://arxiv.org/abs/1607.07032), which is accepted on ECCV 2016.
+行人检测具有极其广泛的应用：智能辅助驾驶，智能监控，行人分析以及智能机器人等领域。随着深度学习的性能的优越性，将深度学习的方法应用到行人中以提高检测准确率。本工程分别采用Faster R-CNN和RPN+BF网络，对Caltech数据集进行训练和测试，并比较两者的结果。
 
-The RPN code in this repo is written based on the MATLAB implementation of Faster R-CNN. Details about Faster R-CNN are in: [ShaoqingRen/faster_rcnn](https://github.com/ShaoqingRen/faster_rcnn).
+This code has been tested on Ubuntu 16.04 with MATLAB 2014b and CUDA 7.5.
 
-This BF code in this repo is written based on Piotr's Image & Video Matlab Toolbox. Details about Piotr's Toolbox are in: [pdollar/toolbox](https://github.com/pdollar/toolbox).
+### Citing 
 
-This code has been tested on Ubuntu 14.04 with MATLAB 2014b and CUDA 7.5.
-
-### Citing RPN+BF
-
-If you find this repo useful in your research, please consider citing:
+#### RPN+BF
 
     @article{zhang2016faster,
       title={Is Faster R-CNN Doing Well for Pedestrian Detection?},
       author={Zhang, Liliang and Lin, Liang and Liang, Xiaodan and He, Kaiming},
       journal={arXiv preprint arXiv:1607.07032},
       year={2016}
+    }
+    
+#### Faster R-CNN
+
+    @article{ren15fasterrcnn,
+    Author = {Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun},
+    Title = {{Faster R-CNN}: Towards Real-Time Object Detection with Region Proposal Networks},
+    Journal = {arXiv preprint arXiv:1506.01497},
+    Year = {2015}
     }
 
 ### Requirements
@@ -33,38 +38,22 @@ If you find this repo useful in your research, please consider citing:
 0. GPU: Titan X, K40c, etc.
 
 
-**WARNING**: The `caffe_.mexa64` in `external/caffe/matlab/caffe_faster_rcnn` might be not compatible with your computer. If so, please try to compile [this Caffe version](https://github.com/zhangliliang/caffe/tree/RPN_BF) and replace it. 
+### How to run
 
-### Testing Demo
+0. Download the special caffe vision for this project(see [here](https://github.com/zhangliliang/caffe/tree/RPN_BF)), and follow the readme.md in it to build and run.
 
-0. Download `VGG16_caltech_final.zip` from [BaiduYun](https://pan.baidu.com/s/1miNdKZe),or [Onedrive](https://1drv.ms/u/s!AgVYvWT--3HKhBhVNhWaSNcV2U0-) and unzip it in the repo folder.
+0. Download the annotations and videos in [Caltech Pedestrian Dataset](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/) and put them in the three folder (videos|res|annotations) under ./RPN_BF/external/code3.2.1/data-USA and ./faster_rcnn_caltech/external/code3.2.1/data-USA.
 
-0. Start MATLAB from the repo folder.
+0. The ./faster_rcnn_caltech include the code of faster rcnn on caltech datasets, follow the readme.md to make sure it perform well. Start MATLAB from the repo folder, and Run `script_faster_rcnn_caltech.m` to train and test the faster rcnn on Caltech, `script_fast_rcnn_caltech_eval.m` to evaluate the result after train and test.
 
-0. Run `faster_rcnn_build`
+0. The ./RPN_BF include the code of RPN+BF on caltech datasets, follow the readme.md to make sure it perform well, Start MATLAB from the repo folder, and Run `script_rpn_pedestrian_VGG16_caltech` to train and test the RPN model on Caltech, Run `script_rpn_bf_pedestrian_VGG16_caltech` to train and test the BF model on Caltech (the evaluation result is included in the test).
 
-0. Run `script_rpn_bf_pedestrian_VGG16_caltech_demo` to see the detection results on some images collected in Internet.
+0. Hopefully it would give the evaluation results.  
 
-### Training on Caltech (RPN)
+### Experiment results
 
-0. Download "Matlab evaluation/labeling code (3.2.1)" as `external/code3.2.1` by run `fetch_data/fetch_caltech_toolbox.m`
+#### Faster RCNN
 
-0. Download the annotations and videos in [Caltech Pedestrian Dataset](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/) and put them in the proper folder follow the instruction in the [website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
-0. Download the VGG-16 pretrain model and the relative prototxt in `VGG16_caltech_pretrain.zip` from [BaiduYun](http://pan.baidu.com/s/1nvGYOVR) or [OneDrive](https://1drv.ms/u/s!AgVYvWT--3HKhCwAD2i_JvgIOPrR), and unzip it in the repo folder. The md5sum for `vgg16.caffemodel` should be `e54292186923567dc14f21dee292ae36`.
-
-0. Start MATLAB from the repo folder, and run `extract_img_anno` for extracting images in JPEG format and annotations in TEXT format from the Caltech dataset.
-
-0. Run `script_rpn_pedestrian_VGG16_caltech` to train and test the RPN model on Caltech. Wait about half day for training and testing.
-
-0. Hopefully it would give the evaluation results around ~14% MR after running.   
-
-### Training on Caltech (RPN+BF)
-
-0. Follow the instruction in "Training on Caltech (RPN)" for obtaining the RPN model.
-
-0. Run `script_rpn_bf_pedestrian_VGG16_caltech` to train and test the BF model on Caltech. Wait about two or three days for training and testing.
-
-0. Hopefully it would give the evaluation results around ~10% MR after running.  
 
 
