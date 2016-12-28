@@ -1,0 +1,70 @@
+run script_rpn_bf_pedestrian_VGG16_caltech
+RPN_BF startup done
+GPU 1: free memory 10985078784
+GPU 2: free memory 9302573056
+GPU 3: free memory 1686241280
+GPU 4: free memory 1763835904
+GPU 5: free memory 11896619008
+GPU 6: free memory 1686241280
+GPU 7: free memory 11773542400
+GPU 8: free memory 11896619008
+GPU 9: free memory 1583218688
+GPU 10: free memory 11896619008
+GPU 11: free memory 428081152
+GPU 12: free memory 11896619008
+GPU 13: free memory 11420303360
+GPU 14: free memory 375783424
+GPU 15: free memory 375783424
+GPU 16: free memory 252706816
+Use GPU 5
+Cleared 0 solvers and 1 stand-alone nets
+Elapsed time is 0.656746 seconds.
+                filters: []
+                   pNms: [1x1 struct]
+                 stride: 4
+                cascThr: -1
+                cascCal: 0.0050
+                  nWeak: [64 128 256 512 1024 1536 2048]
+                 pBoost: [1x1 struct]
+                   seed: 0
+                   name: '/media/mmr6-home/cyq/workspace/RPN_BF/output/VGG16_caltech...'
+               posGtDir: ''
+              posImgDir: ''
+              negImgDir: ''
+              posWinDir: ''
+              negWinDir: ''
+                imreadf: @imread
+                imreadp: {}
+                  pLoad: {1x10 cell}
+                   nPos: Inf
+                   nNeg: 5000
+                nPerNeg: 25
+                nAccNeg: 50000
+                pJitter: {}
+               winsSave: 0
+            roidb_train: [1x1 struct]
+             roidb_test: [1x1 struct]
+             imdb_train: [1x1 struct]
+              imdb_test: [1x1 struct]
+            fg_thres_hi: 1
+            fg_thres_lo: 0.8000
+            bg_thres_hi: 0.5000
+            bg_thres_lo: 0
+                dataDir: 'datasets/caltech/'
+              caffe_net: [1x1 caffe.Net]
+                   conf: [1x1 struct]
+               feat_len: 37632
+              train_gts: {42782x1 cell}
+               exp_name: 'VGG16_caltech'
+           fg_nms_thres: 1
+              fg_use_gt: 1
+      bg_hard_min_ratio: [1 1 1 1 1 1 1]
+          init_detector: ''
+           bg_nms_thres: 1
+    max_rois_num_in_gpu: 3000
+             first_nNeg: 30000
+              cache_dir: '/media/mmr6-home/cyq/workspace/RPN_BF/output/VGG16_caltech...'
+              nms_thres: 0.5000
+                load_gt: 0
+                  ratio: 1
+
