@@ -1,6 +1,6 @@
 # Comparing the differences between Faster RCNN and RPN+BF in pedestrain detection
 
-By 庄月清，常亦谦
+By zyq&cyq
 
 ### Introduction
 
