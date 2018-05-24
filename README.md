@@ -61,7 +61,7 @@ In addition, we have raised the mr to 30% for Faster RCNN on the caltech dataset
 
 #### RPN+BF
 
-![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped.jpg)
+![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped2.jpg)
 ![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/ped3.jpg)
 ![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn.jpg)
 ![image](https://github.com/changyq12/pedestrain_detection/raw/master/screenshots/RPNBF/rpn_bf.jpg)
